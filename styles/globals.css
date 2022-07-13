@@ -24,3 +24,40 @@ a {
   position: relative !important;
   height: unset !important;
 }
+
+.bold-span {
+  font-weight: 800;
+}
+
+.badge-role {
+  animation: rotate 8s infinite;
+  /* transition: smooth; */
+}
+
+.badge-roles::after {
+  content: 'Developer';
+  animation: change alternate 4s infinite;
+
+  transition: all;
+}
+@keyframes change {
+  0% {
+    content: 'Frontend';
+  }
+  50% {
+    content: 'Frontend';
+  }
+  100% {
+    content: 'Entrepenuer';
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(360deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+    /* content: 'Entrepenuer'; */
+  }
+}

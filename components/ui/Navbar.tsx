@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Spacer, Text } from '@chakra-ui/react'
+import { Box, Button, Container, Flex, Spacer, Text } from '@chakra-ui/react'
 import React, { FC } from 'react'
 import { CustomLink } from './CustomLink'
 
@@ -12,9 +12,8 @@ const routes = [
 
 export const Navbar: FC<Props> = () => {
   return (
-    // Desktop
-    <Flex py='1em' border='1px solid red' align='center'>
-      <Flex w='100%' px='8em' alignItems='center' display={['none', 'none', 'flex', 'flex']}>
+    <Flex py='1em' align='center' h='10%'>
+      <Flex w='100%' px={32} alignItems='center' display={['none', 'none', 'flex', 'flex']}>
         <Box>
           <Text fontSize='4xl' color='blue.600'>
             d1eshi
@@ -29,7 +28,7 @@ export const Navbar: FC<Props> = () => {
         <Spacer />
         <Box>
           <Button colorScheme='gray' border='1px' borderRadius={0}>
-            ¡Hablemos!
+            {`Let's chat`}
           </Button>
         </Box>
       </Flex>
