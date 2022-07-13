@@ -9,7 +9,7 @@ interface Props {
 export const MainLayout: FC<Props> = ({ children }) => {
   return (
     <>
-      <Container h='100vh' maxW='100vw' p={0} m={0}>
+      <Container h='100vh' minW='100vw' p={0} m={0}>
         <Navbar />
         {children}
       </Container>

@@ -22,57 +22,76 @@ const Home: React.FC = () => {
   return (
     <MainLayout>
       <Container h='90%' p='0px' maxWidth='100vw'>
-        <Grid templateColumns='55% 45%' h='100%'>
+        <Grid templateColumns={['null', '55% 45%']} h='100%' pt={6}>
           <VStack alignItems='flex-start'>
             {/* first block */}
-            <VStack pl={32} spacing={8} alignItems='flex-start' height='80%' w='100%'>
-              <Text fontSize={['4xl', '4xl', '6xl', '6xl']} position='relative' fontWeight={700}>
-                Hi! I Am{' '}
-                <Badge
+            <VStack
+              p={['0 1rem', '2rem .5rem 0 0']}
+              ml={[0, 32]}
+              borderTop={['null', '1px solid gray']}
+              spacing={[6, 6, 4, 8]}
+              alignItems='flex-start'
+              height='75%'
+              w='cacl(100% - 8rem)'
+            >
+              <Text fontSize={['4xl', '4xl', '4xl', '5xl', '7xl']} fontWeight={700} lineHeight='1.2'>
+                Hi! I Am
+                <Text
+                  // fontSize={['xl', '2xl', '4xl', '6xl', '7xl']}
+                  as='span'
+                  padding='1em  1em'
+                  textTransform='uppercase'
+                  fontWeight='bold'
+                  ml={[2, 5, 2.5, 3, 6]}
                   className='badge-roles'
-                  fontSize='1.2rem'
-                  top={5}
-                  right='-4em'
-                  position='absolute'
+                  verticalAlign='super'
+                  fontSize={['sm', '.4rem', '.6rem', 'sm', 'xl']}
                   variant='solid'
                   bg='brand.500'
-                  size='custom'
+                  color='#eee'
                   borderRadius={38}
-                ></Badge>{' '}
+                >
+                  Frontend Developer
+                </Text>
                 <br /> Diego Silva
               </Text>
-              <Text fontSize='lg'>
-                <span className='bold-span'>Developer</span> with 1+ year of experience{' '}
+              <Text fontSize={['sm', 'sm', 'sm', 'lg', 'xl']} maxW='27em'>
+                <span className='bold-span'>Developer</span> with 1+ year of experience {''}
                 <span className='bold-span'>buliding solutions </span> and searching experiences to grow.
               </Text>
-              <Box>
+              <HStack spacing={2}>
                 <Button
                   backgroundColor='brand.900'
                   _hover={{ bg: '#fe481c' }}
                   color='#eee'
                   fontSize='lg'
-                  px={8}
-                  py={6}
+                  size={['lg', 'md', 'md', 'lg']}
+                  p={['', '', '', '1.5em 2em']}
                   borderRadius={0}
                 >
                   Hire Me
                 </Button>
-                <Button fontSize='lg' px={8} py={6} borderRadius={0}>
+                <Button
+                  size={['lg', 'md', 'md', 'lg']}
+                  fontSize={['lg']}
+                  borderRadius={0}
+                  p={['', '', '', '1.5em 2em']}
+                >
                   Projects
                 </Button>
-              </Box>
+              </HStack>
               <Box>
-                <Text fontSize='3xl' fontWeight={700}>
+                <Text fontSize={['2xl', 'xl', '2xl', '3xl']} fontWeight={700}>
                   Contact
                 </Text>
-                <Text fontSize='lg'>helo@example.com</Text>
+                <Text fontSize={['sm', 'lg', 'sm', 'xl']}>silva.diegof03@gmail.com</Text>
               </Box>
             </VStack>
             <SimpleGrid
               columns={2}
               maxH='15em'
-              px={32}
-              h='30%'
+              px={[4, 32]}
+              h='25%'
               w='100%'
               m={0}
               alignItems='center'
@@ -80,10 +99,12 @@ const Home: React.FC = () => {
               justifyContent='flex-start'
             >
               <Box>
-                <Text color='#eee' fontSize='2xl' fontWeight={700} mb={3}>
+                <Text color='#eee' fontSize={['2xl', 'md', 'xl', '2xl']} fontWeight={700} mb={3}>
                   Main Skills
                 </Text>
-                <Button background='#ffd100'>Know more</Button>
+                <Button background='#ffd100' size={['sm', 'md', 'lg']} borderRadius={0}>
+                  Know more
+                </Button>
               </Box>
               <List
                 display='flex'
@@ -92,10 +113,9 @@ const Home: React.FC = () => {
                 flexWrap='wrap'
                 w='12em'
                 gap='0 1em'
-                h='4em'
                 color='#eee'
               >
-                <SimpleGrid columns={2} spacingX={6} spacingY={2} fontWeight={700}>
+                <SimpleGrid columns={2} fontSize={['sm', 'xs', 'md', 'lg']} spacingX={4} spacingY={2} fontWeight={700}>
                   <ListItem>Javascript</ListItem>
                   <ListItem>React</ListItem>
                   <ListItem>Next.js</ListItem>

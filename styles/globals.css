@@ -29,16 +29,9 @@ a {
   font-weight: 800;
 }
 
-.badge-role {
-  animation: rotate 8s infinite;
-  /* transition: smooth; */
-}
-
 .badge-roles::after {
-  content: 'Developer';
-  animation: change alternate 4s infinite;
-
-  transition: all;
+  /* content: 'Developer'; */
+  /* animation: change alternate 4s infinite; */
 }
 @keyframes change {
   0% {

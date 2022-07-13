@@ -8,17 +8,20 @@ export const customTheme = extendTheme({
   components: {
     Badge: {
       sizes: {
-        custom: {
-          pb: '14px',
-          pt: '11px',
-          px: '18px',
-        },
+        custom: 'max-content',
       },
     },
     Container: {
       'padding-inline-end': '2rem',
       space: {
         p: '0px',
+      },
+    },
+    Button: {
+      size: {
+        '2xl': '3.5rem',
+        '3xl': '4rem',
+        '4': '4.5rem',
       },
     },
   },
