@@ -26,35 +26,42 @@ const Home: React.FC = () => {
           <VStack alignItems='flex-start'>
             {/* first block */}
             <VStack
-              p={['0 1rem', '2rem .5rem 0 0']}
-              ml={[0, 32]}
+              p={['0 1rem', '3rem .5rem 0 0']}
+              ml={[0, 28]}
               borderTop={['null', '1px solid gray']}
               spacing={[6, 6, 4, 8]}
               alignItems='flex-start'
               height='75%'
               w='cacl(100% - 8rem)'
             >
-              <Text fontSize={['4xl', '4xl', '4xl', '5xl', '7xl']} fontWeight={700} lineHeight='1.2'>
-                Hi! I Am
-                <Text
-                  // fontSize={['xl', '2xl', '4xl', '6xl', '7xl']}
-                  as='span'
-                  padding='1em  1em'
-                  textTransform='uppercase'
-                  fontWeight='bold'
-                  ml={[2, 5, 2.5, 3, 6]}
-                  className='badge-roles'
-                  verticalAlign='super'
-                  fontSize={['sm', '.4rem', '.6rem', 'sm', 'xl']}
-                  variant='solid'
-                  bg='brand.500'
-                  color='#eee'
-                  borderRadius={38}
-                >
-                  Frontend Developer
+              <Flex flexWrap='wrap' alignItems='center'>
+                <Text fontSize={['4xl', '4xl', '4xl', '6xl', '7xl']} fontWeight={700} lineHeight='1.2'>
+                  Hi! I Am
                 </Text>
-                <br /> Diego Silva
-              </Text>
+                <Box margin={0}>
+                  <Text
+                    as='span'
+                    display='block'
+                    padding='1em  1em'
+                    // height='100%'
+                    textTransform='uppercase'
+                    fontWeight='bold'
+                    ml={[2, 5, 2.5, 3, 6]}
+                    className='badge-roles'
+                    verticalAlign='super'
+                    fontSize={['xs', 'xs', '.6rem', 'sm', 'xl']}
+                    variant='solid'
+                    bg='brand.500'
+                    color='#eee'
+                    borderRadius={38}
+                  >
+                    Frontend Developer
+                  </Text>
+                </Box>
+                <Text fontSize={['4xl', '4xl', '4xl', '6xl', '7xl']} fontWeight={700} lineHeight='1.2'>
+                  Diego Silva
+                </Text>
+              </Flex>
               <Text fontSize={['sm', 'sm', 'sm', 'lg', 'xl']} maxW='27em'>
                 <span className='bold-span'>Developer</span> with 1+ year of experience {''}
                 <span className='bold-span'>buliding solutions </span> and searching experiences to grow.
@@ -87,44 +94,46 @@ const Home: React.FC = () => {
                 <Text fontSize={['sm', 'lg', 'sm', 'xl']}>silva.diegof03@gmail.com</Text>
               </Box>
             </VStack>
-            <SimpleGrid
-              columns={2}
-              maxH='15em'
-              px={[4, 32]}
+            <Grid
+              gridTemplateColumns='48% 55%'
+              justifyItems='start'
+              px={[4, 28]}
+              gap='1em'
               h='25%'
               w='100%'
               m={0}
               alignItems='center'
               backgroundColor='#262626'
-              justifyContent='flex-start'
+              justifyContent='space-between'
             >
               <Box>
-                <Text color='#eee' fontSize={['2xl', 'md', 'xl', '2xl']} fontWeight={700} mb={3}>
+                <Text color='#eee' fontSize={['lg', 'md', 'lg', '3xl']} noOfLines={1} fontWeight={700} mb={2}>
                   Main Skills
                 </Text>
-                <Button background='#ffd100' size={['sm', 'md', 'lg']} borderRadius={0}>
+                <Button background='#ffd100' size={['sm', 'sm', 'xs', 'md']} borderRadius={0}>
                   Know more
                 </Button>
               </Box>
               <List
-                display='flex'
+                minW='11em'
+                display='grid'
+                fontSize={['sm', 'sm', 'sm', 'lg', 'xl']}
+                gridTemplateColumns='1fr 1fr'
                 alignItems='center'
                 justifyContent='center'
                 flexWrap='wrap'
-                w='12em'
                 gap='0 1em'
                 color='#eee'
+                fontWeight='600'
               >
-                <SimpleGrid columns={2} fontSize={['sm', 'xs', 'md', 'lg']} spacingX={4} spacingY={2} fontWeight={700}>
-                  <ListItem>Javascript</ListItem>
-                  <ListItem>React</ListItem>
-                  <ListItem>Next.js</ListItem>
-                  <ListItem>Typescript</ListItem>
-                  <ListItem>Node.js</ListItem>
-                  <ListItem>Css</ListItem>
-                </SimpleGrid>
+                <ListItem>Javascript</ListItem>
+                <ListItem>React</ListItem>
+                <ListItem>Next.js</ListItem>
+                <ListItem>Typescript</ListItem>
+                <ListItem>Node.js</ListItem>
+                <ListItem>Css</ListItem>
               </List>
-            </SimpleGrid>
+            </Grid>
           </VStack>
           <GridItem w='100%' className={`image-container`} display={['none', 'block']}>
             {/* <Image src='/profile.jpg' layout='fill' alt='image of Diego Silva' className={`image`} /> */}

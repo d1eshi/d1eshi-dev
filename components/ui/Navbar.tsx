@@ -13,7 +13,7 @@ const routes = [
 export const Navbar: FC<Props> = () => {
   return (
     <Flex py='1em' align='center' h='10%'>
-      <Flex w='100%' px={32} alignItems='center' display={['none', 'none', 'flex', 'flex']}>
+      <Flex w='100%' px={28} alignItems='center' display={['none', 'none', 'flex', 'flex']}>
         <Box>
           <Text fontSize='4xl' color='blue.600'>
             d1eshi
