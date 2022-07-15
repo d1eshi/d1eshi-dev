@@ -22,7 +22,7 @@ const Home: React.FC = () => {
   return (
     <MainLayout>
       <Container h='90%' p='0px' maxWidth='100vw'>
-        <Grid templateColumns={['null', '55% 45%']} h='100%' pt={6}>
+        <Grid templateColumns={['null', '55% 45%']} h='100%'>
           <VStack alignItems='flex-start'>
             {/* first block */}
             <VStack
@@ -107,7 +107,7 @@ const Home: React.FC = () => {
               justifyContent='space-between'
             >
               <Box>
-                <Text color='#eee' fontSize={['lg', 'md', 'lg', '3xl']} noOfLines={1} fontWeight={700} mb={2}>
+                <Text color='#eee' fontSize={['lg', 'md', 'lg', '2xl', '4xl']} noOfLines={1} fontWeight={700} mb={2}>
                   Main Skills
                 </Text>
                 <Button background='#ffd100' size={['sm', 'sm', 'xs', 'md']} borderRadius={0}>
@@ -117,7 +117,7 @@ const Home: React.FC = () => {
               <List
                 minW='11em'
                 display='grid'
-                fontSize={['sm', 'sm', 'sm', 'lg', 'xl']}
+                fontSize={['sm', 'sm', 'sm', 'lg', '2xl']}
                 gridTemplateColumns='1fr 1fr'
                 alignItems='center'
                 justifyContent='center'
